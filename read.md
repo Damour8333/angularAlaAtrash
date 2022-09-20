@@ -1,3 +1,13 @@
+echo "# angularAlaAtrash" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Damour8333/angularAlaAtrash.git
+git push -u origin main
+
+
+
 résumé de la premiére partie
 
 
@@ -102,7 +112,7 @@ voir les instance
 https://en.wikipedia.org/wiki/Dependency_injection
 la creation du service 
 
-<!-- 'eme cous angular -->
+<!--4 eme cous angular -->
 le prefixe ça donne l'identité de l'application 
 
 mis en place le projet fonctionnel 
@@ -119,9 +129,36 @@ angular.json
 test unitaire app.compoment.spec.ts  **************************************voir sur web
 dev dependencies
 
+<!-- 6em cours  -->
+routing module
+il fait quoi 
+il va ajouter un module qui s'appelle app-routing-mdule.ts
+export module --routing 
 
+en cas d'oubli du routing c'estng generate module app-routing --flat --module-app 1.20
+creation d'un compoment
+ng serve ou npm run start  pour lancer le serveur localhost 
+***************************************pour faire un component 
+ng generate name
+ng generate detail
+4 fichiers  html css spec pour les test unitaires  et compoments pour la partie compoments
 
-<cnn-product></cnn-product>
+1/on copie le selector dans detail.compoment.ts par exemple ,et on le copie dans app.compoment. html comme ça <pet-home><pet-home>
+ensuite en lance le serveur et en verifie sur le navigateur 
+2/Ensuite on va importer  nos deux modules  dans app-routing.module.ts 
+import { DetailComponent } from './detail/detail.component' //on indique le chemin du detail compoment pour l'exporter dans le fichier app.routing.module.ts 
+import { HomeComponent } from './home/home.component'
+3/Ensuite en remplie notre objet  avec path et component dans app-routing.module.ts
+
+on se base sur le fichier index.html et <base href="/"> pour remplir le tableau route 
+const routes: Routes = [
+  {path: 'home', component: HomeComponent},
+  {path: 'detail/:id/:name', component: DetailComponent}
+];
+
+5/on  remplace <pet-home><pet-home>
+<router-outlet></router-outlet>
+j'en suis a 33min
 <!-- npm -->
 définition npm
 echo "# ala-trash" >> README.md
